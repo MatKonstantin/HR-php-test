@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Pages;
 use App\Http\Controllers\Controller;
 use App\Classes\YandexWeather;
 
-class Weather extends Controller
+class WeatherController extends Controller
 {
     public function showWeather(){
         
