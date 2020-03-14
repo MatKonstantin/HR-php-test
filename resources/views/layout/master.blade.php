@@ -9,6 +9,7 @@
         <header>
             @section('header')
             @include('header.header')
+            @include('header.menu')
             @show
         </header>
         <main>
