@@ -11,6 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+//Route::get('/', function () {
+//    return view('welcome');
+//});
+Route::get('/', ['as' => 'index', 'uses' => 'Pages\WeatherController@showWeather']);
+Route::group(['prefix' => '/orders'], function () {
+    Route::get('/', ['as' => 'orders', 'uses' => 'Pages\OrderController@index']);
+    Route::get('/{id}/edit', ['as' => 'order_edit', 'uses' => 'Pages\OrderController@edit']);
+    Route::post('/{id}/update', ['as' => 'order_update', 'uses' => 'Pages\OrderController@update']);
 });
