@@ -8,6 +8,7 @@
 Для Laravel:
 - `composer install`
 - настроить `.env` файл
+    - настроить API для подключения к яндекс погоде (ключ к api получить здесь - https://developer.tech.yandex.ru/services/)
 - `php artisan key:generate`
 - `php artisan migrate`
 - `php artisan db:seed`
