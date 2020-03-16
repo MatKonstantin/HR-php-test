@@ -11,8 +11,8 @@ class YandexWeatherServiceOptions extends AbstractApiServiceOptions
 
     public function loadOptions()
     {
-        $host = env('YANDEX_WEATHER_HOST', '');
-        $path = env('YANDEX_WEATHER_PATH', '');
+        $host = env('YANDEX_WEATHER_HOST', 'https://api.weather.yandex.ru');
+        $path = env('YANDEX_WEATHER_PATH', '/v1/forecast');
         $api_key = env('YANDEX_WEATHER_API_KEY', '');
         if (!$host || !$path || !$api_key) {
             throw new ApiServiceException(ApiServiceException::ERROR_MESSAGES['INVALID_OPTIONS'], ApiServiceException::ERROR_CODES['INVALID_OPTIONS']);
